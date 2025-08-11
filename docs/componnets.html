@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Components · LumenCSS</title>
+  <link rel="stylesheet" href="./lumencss.css">
+  <link rel="stylesheet" href="./docs.css">
+</head>
+<body>
+  <header class="docs-header">
+    <div class="wrapper cluster" style="justify-content:space-between">
+      <a class="brand" href="./">LumenCSS</a>
+      <nav class="cluster">
+        <a href="./getting-started.html">Get started</a>
+        <a aria-current="page" href="./components.html">Components</a>
+        <a href="https://github.com/DEINUSER/lumencss" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="docs-shell wrapper">
+    <aside class="docs-sidebar">
+      <nav aria-label="Sections">
+        <ul class="toc">
+          <li><a href="./">Overview</a></li>
+          <li><a href="./getting-started.html">Get started</a></li>
+          <li><a aria-current="page" href="./components.html">Components</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <article class="docs-content">
+      <section>
+        <h1>Buttons</h1>
+        <div class="card cluster">
+          <button class="btn">Primary</button>
+          <button class="btn btn--outline">Outline</button>
+          <button class="btn btn--soft">Soft</button>
+          <button class="btn" data-variant="accent">Accent</button>
+          <button class="btn" data-variant="danger">Danger</button>
+        </div>
+<pre><code>&lt;button class="btn"&gt;Primary&lt;/button&gt;</code></pre>
+      </section>
+
+      <section>
+        <h2>Form fields</h2>
+        <div class="card stack" style="max-width:560px">
+          <div class="field">
+            <label for="email">Email</label>
+            <input class="input" id="email" type="email" placeholder="you@example.com" required>
+          </div>
+          <div class="field">
+            <label for="role">Role</label>
+            <select id="role" class="select"><option>Viewer</option><option>Editor</option></select>
+          </div>
+          <div class="cluster">
+            <button class="btn">Save</button>
+            <button class="btn btn--outline">Cancel</button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Layout patterns</h2>
+        <div class="card layout-two-col">
+          <aside class="pane">
+            <h3>Project</h3>
+            <p class="is-muted">Project metadata.</p>
+          </aside>
+          <div class="pane stack">
+            <div class="field">
+              <label for="pname">Project name</label>
+              <input class="input" id="pname" placeholder="Roadmap">
+            </div>
+            <div class="field">
+              <label for="pdesc">Description</label>
+              <textarea class="textarea" id="pdesc" rows="3" placeholder="Short summary…"></textarea>
+            </div>
+            <div class="cluster">
+              <a class="btn" href="#saved">Save</a>
+              <a class="btn btn--outline" href="#">Cancel</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Getting started · LumenCSS</title>
+  <link rel="stylesheet" href="./lumencss.css">
+  <link rel="stylesheet" href="./docs.css">
+</head>
+<body>
+  <header class="docs-header">
+    <div class="wrapper cluster" style="justify-content:space-between">
+      <a class="brand" href="./">LumenCSS</a>
+      <nav class="cluster">
+        <a aria-current="page" href="./getting-started.html">Get started</a>
+        <a href="./components.html">Components</a>
+        <a href="https://github.com/DEINUSER/lumencss" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="docs-shell wrapper">
+    <aside class="docs-sidebar">
+      <nav aria-label="Sections">
+        <ul class="toc">
+          <li><a href="./">Overview</a></li>
+          <li><a aria-current="page" href="./getting-started.html">Get started</a></li>
+          <li><a href="./components.html">Components</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <article class="docs-content">
+      <section>
+        <h1>Install</h1>
+        <p>Copy the compiled CSS into <code>/docs</code> and link it:</p>
+<pre><code>&lt;link rel="stylesheet" href="lumencss.css"&gt;</code></pre>
+        <p>Source tokens live in your repository; no preprocessor is required.</p>
+      </section>
+
+      <section>
+        <h2>Layout shell</h2>
+<pre><code>&lt;div class="wrapper"&gt;
+  &lt;h1 class="is-h1"&gt;Hello&lt;/h1&gt;
+  &lt;div class="card stack"&gt;
+    &lt;div class="field"&gt;
+      &lt;label for="email"&gt;Email&lt;/label&gt;
+      &lt;input class="input" id="email" type="email" placeholder="you@example.com" required&gt;
+    &lt;/div&gt;
+    &lt;button class="btn"&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <section>
+        <h2>Customize tokens</h2>
+        <p>Adjust HSL color scales, spacing, and radii in your theme file. Changes cascade across components automatically.</p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

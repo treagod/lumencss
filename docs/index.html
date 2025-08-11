@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>LumenCSS — Documentation</title>
+  <link rel="stylesheet" href="../dist/lumencss.css">
+  <link rel="stylesheet" href="./docs.css">
+</head>
+<body>
+  <header class="docs-header">
+    <div class="wrapper cluster" style="justify-content:space-between">
+      <a class="brand" href="./" aria-label="Home">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 12a9 9 0 1118 0 9 9 0 01-18 0zm4.5 0h9M12 7.5v9"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>LumenCSS</span>
+      </a>
+      <nav class="cluster">
+        <a href="./getting-started.html">Get started</a>
+        <a href="./components.html">Components</a>
+        <a href="https://github.com/DEINUSER/lumencss" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <section class="hero">
+      <h1 class="is-h1">LumenCSS</h1>
+      <p>CSS-only micro framework with HSL design tokens, cascade layers, rounded components, and pragmatic layout patterns.</p>
+      <div class="cluster" style="margin-top:.75rem">
+        <a class="btn" href="./getting-started.html">Get started</a>
+        <a class="btn btn--outline" href="./components.html">Browse components</a>
+      </div>
+    </section>
+
+    <div class="docs-shell wrapper">
+      <aside class="docs-sidebar">
+        <nav aria-label="On this site">
+          <ul class="toc">
+            <li><a aria-current="page" href="./">Overview</a></li>
+            <li><a href="./getting-started.html">Get started</a></li>
+            <li><a href="./components.html">Components</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <article class="docs-content">
+        <section>
+          <h2>Principles</h2>
+          <div class="cards">
+            <div class="card">
+              <h3>CSS only</h3>
+              <p>No build tools required. Just link the stylesheet and go.</p>
+            </div>
+            <div class="card">
+              <h3>Readable tokens</h3>
+              <p>HSL variables for color, spacing, radius, shadows, and type scales.</p>
+            </div>
+            <div class="card">
+              <h3>Solid defaults</h3>
+              <p>Responsive layout, accessible focus, and sensible component states.</p>
+            </div>
+            <div class="card">
+              <h3>Rounded & friendly</h3>
+              <p>Softer radii and subtle surfaces without sacrificing contrast.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Quick include</h2>
+<pre><code>&lt;link rel="stylesheet" href="lumencss.css"&gt;</code></pre>
+          <p class="is-muted text-xs">Use a relative path inside <code>/docs</code> so it works on GitHub Pages project sites.</p>
+        </section>
+      </article>
+    </div>
+
+    <footer class="footer">
+      <p class="is-muted text-xs">© 2025 LumenCSS — CSS-only.</p>
+    </footer>
+  </main>
+</body>
+</html>
