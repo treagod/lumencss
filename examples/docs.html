@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>LumenCSS – Demo</title>
+  <link rel="stylesheet" href="../dist/lumencss.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="wrapper cluster" style="justify-content:space-between">
+      <a class="brand cluster" href="#" aria-label="Startseite">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 12a9 9 0 1118 0 9 9 0 01-18 0zm4.5 0h9M12 7.5v9"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">LumenCSS</span>
+      </a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul class="nav-list cluster">
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#components">Komponenten</a></li>
+          <li><a href="#forms">Formulare</a></li>
+          <li><a href="#layouts">Layouts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="docs wrapper">
+    <aside class="sidebar">
+      <h2 class="sidebar-title">Inhalt</h2>
+      <ol class="toc">
+        <li><a href="#intro">Was & warum</a></li>
+        <li><a href="#components">Komponenten</a></li>
+        <li><a href="#forms">Formulare</a></li>
+        <li><a href="#layouts">Layouts</a></li>
+      </ol>
+    </aside>
+
+    <article class="content">
+      <section id="intro">
+        <h1>LumenCSS – CSS-only Micro-Framework</h1>
+        <p>Design-Tokens (HSL), responsives Layout, zugängliche Komponenten – keine Abhängigkeiten, kein Build.</p>
+        <div class="cluster">
+          <span class="badge">HSL Tokens</span>
+          <span class="badge" style="border-color: var(--info-border-subtle); background: var(--info-bg-subtle); color: var(--info-text-emphasis);">Dark-Mode</span>
+          <span class="badge" style="border-color: var(--success-border-subtle); background: var(--success-bg-subtle); color: var(--success-text-emphasis);">Forms</span>
+        </div>
+        <div class="alert">✅ Production-ready: klare Layer-Reihenfolge & sinnvolle Defaults.</div>
+      </section>
+
+      <section id="components">
+        <h2>Komponenten</h2>
+        <div class="card">
+          <div class="cluster">
+            <button class="btn">Primär</button>
+            <button class="btn btn--outline">Outline</button>
+            <button class="btn btn--soft">Soft</button>
+            <button class="btn" data-variant="accent">Accent</button>
+            <button class="btn" data-variant="danger">Gefahr</button>
+          </div>
+        </div>
+
+        <table class="table" data-striped>
+          <thead><tr><th>Token</th><th>Wert</th><th>Rolle</th></tr></thead>
+          <tbody>
+            <tr><td>--color-primary</td><td>HSL</td><td>Aktion & Fokus</td></tr>
+            <tr><td>--bg-surface</td><td>HSL</td><td>Flächen</td></tr>
+            <tr><td>--radius-lg</td><td>1rem</td><td>Rundung</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="forms">
+        <h2>Formulare</h2>
+        <div class="card stack">
+          <div class="field">
+            <label for="email">E-Mail</label>
+            <input class="input" id="email" type="email" placeholder="du@example.com" required>
+            <p class="hint">Wir teilen deine E-Mail nie mit Dritten.</p>
+          </div>
+          <div class="field" data-state="error">
+            <label for="pwd">Passwort</label>
+            <input class="input" id="pwd" type="password" placeholder="Mind. 12 Zeichen" aria-invalid="true">
+            <p class="error">Zu kurz – bitte länger wählen.</p>
+          </div>
+
+          <div class="field">
+            <label for="url">Webhook URL</label>
+            <div class="input-group">
+              <span class="addon">https://</span>
+              <input class="input" id="url" placeholder="api.dein-dienst.io/hook">
+              <span class="addon">/v1</span>
+            </div>
+          </div>
+
+          <div class="cluster">
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="switch__track"><span class="switch__thumb"></span></span>
+              <span class="switch__label">Benachrichtigungen</span>
+            </label>
+
+            <fieldset class="segmented" aria-label="Zeitraum">
+              <input type="radio" name="p" id="p1" checked><label for="p1">Heute</label>
+              <input type="radio" name="p" id="p2"><label for="p2">Woche</label>
+              <input type="radio" name="p" id="p3"><label for="p3">Monat</label>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+
+      <section id="layouts">
+        <h2>Layouts</h2>
+        <div class="card layout-two-col">
+          <aside class="pane">
+            <h3>Projekt</h3>
+            <p class="is-muted">Meta-Daten deines Projekts.</p>
+          </aside>
+          <div class="pane stack">
+            <div class="field">
+              <label for="pname">Projektname</label>
+              <input class="input" id="pname" placeholder="Meine Roadmap">
+            </div>
+            <div class="field">
+              <label for="pdesc">Beschreibung</label>
+              <textarea class="textarea" id="pdesc" rows="3" placeholder="Kurzbeschreibung …"></textarea>
+            </div>
+            <div class="cluster">
+              <a class="btn" href="#modal">Speichern</a>
+              <a class="btn btn--outline" href="#">Abbrechen</a>
+            </div>
+          </div>
+        </div>
+
+        <section id="modal" class="modal-sheet" role="dialog" aria-modal="true">
+          <div class="modal-surface card">
+            <h3>Hallo 👋</h3>
+            <p>Das ist ein CSS-only Modal via <code>:target</code>.</p>
+            <p><a class="btn" href="#layouts">Schließen</a></p>
+          </div>
+        </section>
+
+        <div class="card">
+          <div class="grid-container" data-gap="sm">
+            <div class="demo-cell grid-item" data-col-sm="12" data-col-md="6" data-col-lg="4">1</div>
+            <div class="demo-cell grid-item" data-col-sm="6"  data-col-md="3" data-col-lg="4">2</div>
+            <div class="demo-cell grid-item" data-col-sm="6"  data-col-md="3" data-col-lg="4">3</div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p class="is-muted text-xs">© 2025 LumenCSS – CSS-only. <a href="#intro">Nach oben</a></p>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>

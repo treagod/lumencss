@@ -1,0 +1,9 @@
+@layer reset, base, theme, layout, components, utilities, patterns;
+@import url("../src/reset.css")       layer(reset);
+@import url("../src/base.css")        layer(base);
+@import url("../src/theme-brand.css") layer(theme);
+@import url("../src/layout.css")      layer(layout);
+@import url("../src/components.css")  layer(components);
+@import url("../src/forms.css")       layer(components);
+@import url("../src/utilities.css")   layer(utilities);
+@import url("../src/patterns.css")    layer(patterns);

@@ -1,0 +1,8 @@
+@layer patterns {
+  .layout-two-col{ display:grid; gap: var(--space-4); }
+  @media (min-width:768px){ .layout-two-col{ grid-template-columns:260px 1fr; } }
+  .card-stack{ display:grid; gap: var(--space-3); }
+  .list-card{ align-items:center; justify-content:space-between; }
+  .list-card .avatar{ inline-size:40px; block-size:40px; border-radius: var(--radius-pill); background: var(--primary-bg-subtle); color: var(--primary-text-emphasis); display:grid; place-items:center; font-weight:700; }
+  .list-content{ flex:1; min-inline-size:0; }
+}
